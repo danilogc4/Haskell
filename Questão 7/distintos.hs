@@ -1,6 +1,6 @@
 existe :: Integer -> [Integer] -> Bool
 existe n (a:x)
-    | x == [] = False
+    | x == [] = n == a
     | n == a = True
     | otherwise = existe n x
 
