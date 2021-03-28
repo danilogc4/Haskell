@@ -9,6 +9,8 @@ tamanho [] = 0
 tamanho (a:x) = 1 + tamanho x
 
 removerFim :: Integer -> [Integer] -> [Integer]
+removerFim n [] = []
+removerFim 0 (a:x) = [a]++x
 removerFim n (a:x)
     | n == 0 = [a]++x
     | otherwise = pegaInicio ((tamanho ([a]++x))-n) ([a]++x)

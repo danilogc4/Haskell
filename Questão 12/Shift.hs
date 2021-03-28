@@ -11,6 +11,8 @@ final c (a:x)
 
 
 shift :: Integer -> [Integer] -> [Integer]
+shift n [] = []
+shift 0 (a:x) = [a]++x
 shift n (a:x)
     | n == 0 = [a]++x
     | otherwise = retiraInicio n ([a]++x++final n ([a]++x)) -- [a]++x++final n ([a]++x) = [] + final
